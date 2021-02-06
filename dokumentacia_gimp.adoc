@@ -1,0 +1,16 @@
+
+= LBP Príznaky
+:toc:
+
+== O plugine - todo
+
+
+== Inštalácia na Ubuntu
+Plug-in je určený pre Gimp verzie 2.10. Skript stiahnite a presuňte do priečinka, ktorý má Gimp nastavený ako zdroj plug-inov (môžte to skontrolovať v menu Edit -> Preferences -> Folders -> Plug-ins, zvoľte ľubovoľný z uvedených priečinkov). Uistite sa, že skript má právo na spustenie a ak nie, pridajte mu ho príkazom _cd <plugins_dir>; chmod +x <názov_skriptu>_. Po spustení Gimpu by mal byť skript automaticky k dispozícií v menu Image -> Create LBP histogram. 
+
+== Inštalácia Windows - todo
+
+== Použitie
+
+== Ukážky výstupu
+
