@@ -5,24 +5,15 @@
 Plug-in vytvára zo zdrojového obrázku jeho LBP histogram, je určený pre Gimp verzie 2.10. a Python verzie 3.x. Skript využíva výhradne natívne Python funkcie, vďaka čomu si môžme ušetriť nervy inštaláciou externých knižníc. Vstupný obrázok v ľubovoľnom farebnom móde je prevedený na čiernobiely, následne sa generuje výsledný LBP histogram, ktorý sa pridá na novú vrstvu (teda pôvodný obrázok ostane nezmenený).
 Jedná sa o základnú verziu bez možosti zvolenia polomeru okolia, progres je možné sledovať na spodnej lište. 
 
-== Inštalácia na Ubuntu
+== Inštalácia
 
-[tabbed]
 Ubuntu::
-+ 
-bla bla
 + 
 Plug-in je určený pre Gimp verzie 2.10. Skript stiahnite a presuňte do priečinka, ktorý má Gimp nastavený ako zdroj plug-inov (môžte to skontrolovať v menu Edit -> Preferences -> Folders -> Plug-ins, zvoľte ľubovoľný z uvedených priečinkov). Uistite sa, že skript má právo na spustenie a ak nie, pridajte mu ho príkazom _cd <plugins_dir>; chmod +x <názov_skriptu>_. Po spustení Gimpu by mal byť skript automaticky k dispozícií v menu Image -> Create LBP histogram. 
 
 Inštalácia Windows::
 + 
 bla bla
-
-[%collapsible]
-.Řešení 1. domacího úkolu
-====
-Zde je řešení domací úlohy.
-====
 
 
 
@@ -49,7 +40,13 @@ výstup:
 
 image::Gimp/scarlett_LBP.png[]
 
-== Implementácia
+== Technické detaily implementácie
+
+image::Gimp/to_grayscale.png[]
+
+image::Gimp/resulting_pixel.png[]
+
+image::Gimp/borders.png[]
 
 == Zdroje
 Inšpiráciu pre skript som čerpala z materiálov cvičení PGA, dokumentácie pre Gimp https://developer.gimp.org/index.html , oficiálnej Python dokumentácie a štruktúru dokumentu z referenčných prác. 
