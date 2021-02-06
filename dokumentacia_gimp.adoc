@@ -7,11 +7,11 @@ Jedná sa o základnú verziu bez možosti zvolenia polomeru okolia, progres je 
 
 == Inštalácia
 
-Ubuntu::
+Linux::
 + 
 Plug-in je určený pre Gimp verzie 2.10. Skript stiahnite a presuňte do priečinka, ktorý má Gimp nastavený ako zdroj plug-inov (môžte to skontrolovať v menu Edit -> Preferences -> Folders -> Plug-ins, zvoľte ľubovoľný z uvedených priečinkov). Uistite sa, že skript má právo na spustenie a ak nie, pridajte mu ho príkazom _cd <plugins_dir>; chmod +x <názov_skriptu>_. Po spustení Gimpu by mal byť skript automaticky k dispozícií v menu Image -> Create LBP histogram. 
 
-Inštalácia Windows::
+Windows::
 + 
 bla bla
 
@@ -39,14 +39,22 @@ image::./Gimp/scarlett.png[]
 výstup:
 
 image::Gimp/scarlett_LBP.png[]
-
 == Technické detaily implementácie
+
+Ako prvé skonvertujeme obrázok na čiernobiely pomocou relatívnych luma koeficientov.
 
 image::Gimp/to_grayscale.png[]
 
-image::Gimp/resulting_pixel.png[]
+Získame okolie každého pixelu. V prípade, že okolie sa nachádza mimo rozsah obrázka, je hodnota daného pixelu nahradená hodnotou 255. Ostatné metódy doplnenia krajných hodnôt
+(zrkadlenie pôvodného obrázku, extrapolácia hodnôt) sú na ručnú implementáciu zbytočne komplikované a neprinesú v prípade LBP histogramu výrazne lepší výsledok. 
 
 image::Gimp/borders.png[]
+
+Využitím python list comprehension elegantne vytvoríme pole bitov výsledného centrálneho pixelu. 
+
+image::Gimp/resulting_pixel.png[]
+
+Napokon, hodnotu jednoducho prevedieme do dekadicej sústavy a zapíšeme do výsledného histogramu.
 
 == Zdroje
 Inšpiráciu pre skript som čerpala z materiálov cvičení PGA, dokumentácie pre Gimp https://developer.gimp.org/index.html , oficiálnej Python dokumentácie a štruktúru dokumentu z referenčných prác. 
