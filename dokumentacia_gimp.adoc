@@ -1,9 +1,9 @@
-
 = LBP Príznaky
 :toc:
 
-== O plugine - todo
-
+== O plugine
+Plug-in vytvára zo zdrojového obrázku jeho LBP histogram, je určený pre Gimp verzie 2.10. a Python verzie 3.x. Skript využíva výhradne natívne Python funkcie, vďaka čomu si môžme ušetriť nervy inštaláciou externých knižníc. Vstupný obrázok v ľubovoľnom farebnom móde je prevedený na čiernobiely, následne sa generuje výsledný LBP histogram, ktorý sa pridá na novú vrstvu (teda pôvodný obrázok ostane nezmenený).
+Jedná sa o základnú verziu bez možosti zvolenia polomeru okolia, progres je možné sledovať na spodnej lište. 
 
 == Inštalácia na Ubuntu
 Plug-in je určený pre Gimp verzie 2.10. Skript stiahnite a presuňte do priečinka, ktorý má Gimp nastavený ako zdroj plug-inov (môžte to skontrolovať v menu Edit -> Preferences -> Folders -> Plug-ins, zvoľte ľubovoľný z uvedených priečinkov). Uistite sa, že skript má právo na spustenie a ak nie, pridajte mu ho príkazom _cd <plugins_dir>; chmod +x <názov_skriptu>_. Po spustení Gimpu by mal byť skript automaticky k dispozícií v menu Image -> Create LBP histogram. 
@@ -11,6 +11,22 @@ Plug-in je určený pre Gimp verzie 2.10. Skript stiahnite a presuňte do prieč
 == Inštalácia Windows - todo
 
 == Použitie
+Po inštalácií pluginu a spustení Gimpu je skript k dispozícií v menu Image -> Create LBP histogram. Skript je možné spustiť po nahratí zdrojového obrázku. Výsledný histogram sa objaví na novej vrstve.
 
 == Ukážky výstupu
 
+=== RGBA
+vstup:
+image::Gimp/lenna.png 
+
+výstup:
+image::lenna_LBP.png
+
+=== Grayscale
+vstup: 
+image::./Gimp/todo.png[]
+
+výstup:
+image::todo_LBP.png
+
+== Implementácia
