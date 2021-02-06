@@ -17,16 +17,20 @@ Po inštalácií pluginu a spustení Gimpu je skript k dispozícií v menu Image
 
 === RGBA
 vstup:
-image:Gimp/lenna.png 
+
+image:Gimp/lenna.png[]
 
 výstup:
-image::lenna_LBP.png
+
+image::Gimp/lenna_LBP.png[]
 
 === Grayscale
 vstup: 
-image::./Gimp/lenna_LBP.png[]
+
+image::./Gimp/scarlett.png[]
 
 výstup:
-image::todo_LBP.png
+
+image::Gimp/scarlett_LBP.png[]
 
 == Implementácia
