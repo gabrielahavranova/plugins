@@ -1,5 +1,15 @@
-** xref:/2D/dokumentace1.adoc#[link1]
+= Semestrálne práce BI-PGA
+
+== 2D
+=== LBP Příznaky
+Vytvořte plug-in do GIMPu počítající a zobrazující příznaky (parametrické) LBP (30b)
+
+LBP plugin počíta a zobrazuje jeho LBP príznaky pre vstupný obrázok v ľubovoľnom farebnom móde. 
 
 image::img1.jpg[]
+
+** xref:/2D/dokumentace1.adoc#[link na dokumentáciu]
+
+
 
 ** xref:/2D/dokumentace1.adoc#[link2]
