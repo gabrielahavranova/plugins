@@ -1,0 +1,5 @@
+** xref:/2D/dokumentace1.adoc#[link1]
+
+image::img1.jpg[]
+
+** xref:/2D/dokumentace1.adoc#[link2]
