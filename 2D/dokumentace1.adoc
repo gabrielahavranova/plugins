@@ -29,34 +29,34 @@ Po inštalácií pluginu a spustení Gimpu je skript k dispozícií v menu Image
 === RGBA
 vstup:
 
-image:Gimp/lenna.png[]
+image:images/lenna.png[]
 
 výstup:
 
-image::Gimp/lenna_LBP.png[]
+image::images/lenna_LBP.png[]
 
 === Grayscale
 vstup: 
 
-image::./Gimp/scarlett.png[]
+image::images/scarlett.png[]
 
 výstup:
 
-image::Gimp/scarlett_LBP.png[]
+image::images/scarlett_LBP.png[]
 == Technické detaily implementácie
 
 Ako prvé skonvertujeme obrázok na čiernobiely pomocou relatívnych luma koeficientov.
 
-image::Gimp/to_grayscale.png[]
+image::images/to_grayscale.png[]
 
 Získame okolie každého pixelu. V prípade, že okolie sa nachádza mimo rozsah obrázka, je hodnota daného pixelu nahradená hodnotou 255. Ostatné metódy doplnenia krajných hodnôt
 (zrkadlenie pôvodného obrázku, extrapolácia hodnôt) sú na ručnú implementáciu zbytočne komplikované a neprinesú v prípade LBP transformácie výrazne lepší výsledok. 
 
-image::Gimp/borders.png[]
+image::images/borders.png[]
 
 Využitím python list comprehension elegantne vytvoríme pole bitov výsledného centrálneho pixelu. 
 
-image::Gimp/resulting_pixel.png[]
+image::images/resulting_pixel.png[]
 
 Napokon, hodnotu jednoducho prevedieme do dekadicej sústavy a zapíšeme do výsledného obrazu.
 
