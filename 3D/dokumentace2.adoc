@@ -1,6 +1,8 @@
 = Dokumentácia City generator
 :toc: 
 
+== Zadanie
+
 == Popis 
 City generátor je plugin do Blenderu, ktorý generuje mesto zložené z náhodne 
 generovaných mrakodrapov. 
@@ -8,12 +10,15 @@ Je možné si zvoliť trojicu farieb budov, výšku a šírku mriežky mesta.
 Plugin je určený pre Blender 2.81.
 
 == Inštalácia
+=== OS Windows i Unix
 Stiahneme zdrojový kód pluginu ```city_generator.py```, otvoríme ho vo vstavanom Blender Scripting editore
 a skript spustíme tlačidlom vpravo hore _Run Script_.
 
 == Spustenie 
 
 Skript nájdeme pod položkou _Add_ -> _Mesh_ -> _City generator_.
+
+image::./images/menu3.png[]
 
 == Použitie
 
@@ -24,3 +29,21 @@ V tomto plugine dokážeme nastavovať nasledujúce parametre:
 - *City depth* - počet budov na dĺžku
 
 - *Color1 - Color3* - trojica farieb, použitá na zafarbenie budov (na poradí nezáleží, farby sú budovám priradzované náhodne)
+
+image::./images/menu1.png[]
+
+image::./images/menu2.png[]
+
+== Technická dokumentácia
+
+== Ukážka použitia
+
+image::./images/render.png[]
+
+image::./images/render2.png[]
+
+image::./images/render3.png[]
+
+== Zdroje
+
+
