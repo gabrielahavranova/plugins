@@ -180,7 +180,7 @@ def createBuildingPart(vertices, edges, faces, location, size, height, pillar_sz
                   location[0] + w / 3 * 2 + 2 * pillar_sz]
         y_locs = [location[1] + w / 3 + pillar_sz, location[1] + w / 3 * 2 + 2 * pillar_sz,
                   location[1], location[1]]
-        for i in range(0, 4):
+        for i in range(0, 2):
             createBlock(vertices, edges, faces,
                        (x_locs[i], y_locs[i], location[2] + 0.5),
                         size, pillar_sz, height)
@@ -375,11 +375,11 @@ def create_mesh_object(context, verts, edges, faces, name):
 
 
 def add_object_button(self, context):
-    self.layout.operator(OBJECT_OT_add_object.bl_idname, text="xTest", icon="PLUGIN")
+    self.layout.operator(OBJECT_OT_add_object.bl_idname, text="xCity", icon="PLUGIN")
 
 
 def menu_func(self, context):
-    self.layout.operator(xHouse.bl_idname, text="City generator", icon="PLUGIN")
+    self.layout.operator(xCity.bl_idname, text="City generator", icon="PLUGIN")
 
 
 def register():
