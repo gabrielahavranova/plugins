@@ -18,4 +18,4 @@ City generator na základe zvolenej veľkosti a farieb vygeneruje mesto tvorené
 
 image::img2.jpg[]
 
-** xref:/2D/dokumentace1.adoc#[link na dokumentáciu]
+** xref:/3D/dokumentace2.adoc#[link na dokumentáciu]
