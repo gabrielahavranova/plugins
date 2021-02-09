@@ -329,14 +329,75 @@ def createMaterials(color_1, color_2, color_3):
 mater_index = {1: "color1", 2: "color2", 3: "color3"}
 ----
 
+=== Hlavná trieda xCity
+
+Základná trieda nášho pluginu, stará sa o deklaráciu panelu programu a v jej tele volá funkciu generateBuilding().
+
 [source, python]
 ----
+class xCity(bpy.types.Operator):
+    """Create new city of your dreams!"""
+
+    bl_idname = "object.xcity"
+    bl_label = "City generator"
+    bl_options = {"REGISTER", "UNDO"}
+
+    # set number of buildings in x axis
+    number_of_rows = bpy.props.IntProperty(
+        name="City width", subtype="FACTOR", default=7, min=3, max=20
+    )
+
+    # set number of buildings in y axis
+    number_of_cols = bpy.props.IntProperty(
+        name="City depth", subtype="FACTOR", default=7, min=3, max=20
+    )
+
+    # set possible building colors
+    color_1 = bpy.props.FloatVectorProperty(
+        name="Color 1",
+        default=(0.8, 0.8, 0.9, 1.0),
+        min=0.0,
+        max=1.0,
+        subtype="COLOR",
+        step=1,
+        size=4,
+    )
+
+    color_2 = bpy.props.FloatVectorProperty(
+        name="Color 2",
+        default=(0.02, 0.055, 0.8, 1.0),
+        min=0.0,
+        max=1.0,
+        subtype="COLOR",
+        step=1,
+        size=4,
+    )
+
+    color_3 = bpy.props.FloatVectorProperty(
+        name="Color 3",
+        default=(0.064, 0.01, 0.038, 1.0),
+        min=0.0,
+        max=1.0,
+        subtype="COLOR",
+        step=1,
+        size=4,
+    )
+
+    def execute(self, context):
+        materials = createMaterials(self.color_1, self.color_2, self.color_3)
+        building_nbr = 0
+        earth = createEarth(self.number_of_rows, self.number_of_cols, context)
+
+        for i in range(0, self.number_of_rows):
+            for j in range(0, self.number_of_cols):
+                # create empty spot once in a while
+                if random.randint(1, 20) % 5 == 0:
+                    continue
+                building = createBuilding((i * 35, j * 35, 3.0), context, building_nbr, materials)
+
+        return {"FINISHED"}
 ----
 
-
-[source, python]
-----
-----
 
 
 
@@ -351,4 +412,4 @@ image::./images/render3.png[]
 
 == Zdroje
 
-
+Vzorové práce z cvičení a ostatných študentov (predovšetkým kostra programu).
