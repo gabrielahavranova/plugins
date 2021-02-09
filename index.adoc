@@ -11,5 +11,6 @@ image::img1.jpg[]
 ** xref:/2D/dokumentace1.adoc#[link na dokumentáciu]
 
 
+image::img2.jpg[]
 
 ** xref:/2D/dokumentace1.adoc#[link2]
