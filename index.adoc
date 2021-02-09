@@ -10,7 +10,12 @@ image::img1.jpg[]
 
 ** xref:/2D/dokumentace1.adoc#[link na dokumentáciu]
 
+== 3D
+=== Generovanie objektov - City generator
+Vytvořte plug-in do Blenderu generující parametrizovatelné objekty. Body jsou odvozeny dle složitosti generovaného objektu	(10-50b)
+
+City generator na základe zvolenej veľkosti a farieb vygeneruje mesto tvorené náhodne generovanými mrakodrapmi. 
 
 image::img2.jpg[]
 
-** xref:/2D/dokumentace1.adoc#[link2]
+** xref:/2D/dokumentace1.adoc#[link na dokumentáciu]
