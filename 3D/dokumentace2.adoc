@@ -18,7 +18,7 @@ Plugin je určený pre Blender 2.81.
 
 == Inštalácia
 === OS Windows i Unix
-Stiahneme zdrojový kód pluginu ```city_generator.py```, otvoríme ho vo vstavanom Blender Scripting editore
+Stiahneme zdrojový kód pluginu ```city_generator.py```, ktorý sa nachádza v tomto priečinku, otvoríme ho vo vstavanom Blender Scripting editore
 a skript spustíme tlačidlom vpravo hore _Run Script_.
 
 == Spustenie 
