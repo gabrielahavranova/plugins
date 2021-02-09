@@ -1,7 +1,14 @@
 = Dokumentácia City generator
 :toc: 
 
+image::./images/render4.png[]
+
 == Zadanie
+generátor objektů
+
+Vytvořte plug-in generující dle zadaných parametrů objekt/sadu objektů. Může jít o jediný dům parametrizovaný počtem pater a velostí, o uluci s domy, vlak, housenku řízenou počtem noh…​
+
+Body jsou přiděleny v závislosti na koplexnosti generovaného objektu (objektů) 10b (housenka) 30b (ulice).
 
 == Popis 
 City generátor je plugin do Blenderu, ktorý generuje mesto zložené z náhodne 
