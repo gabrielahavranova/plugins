@@ -411,11 +411,17 @@ class xCity(bpy.types.Operator):
 
 == Ukážka použitia
 
-image::./images/render.png[]
+image::./images/untitled1.png[]
 
-image::./images/render2.png[]
+image::./images/untitled2.png[]
 
-image::./images/render3.png[]
+image::./images/untitled3.png[]
+
+image::./images/untitled4.png[]
+
+== Popis variability budov
+
+image::./images/Untitled5.png[]
 
 == Zdroje
 
