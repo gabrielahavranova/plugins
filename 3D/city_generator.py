@@ -33,8 +33,40 @@ def createMaterials(color_1, color_2, color_3):
     gray = bpy.data.materials.new(name="gray")
     gray.diffuse_color = (0.05, 0.05, 0.05, 1.0)
 
+    # black glossy material used for windows -----------
     black = bpy.data.materials.new(name="black")
-    black.diffuse_color = (0.0, 0.0, 0.0, 1.0)
+    # set material subsurface depth and color
+    black.use_nodes = True
+    black_node_tree = black.node_tree.nodes["Principled BSDF"]
+    # diffuse color
+    black_node_tree.inputs[0].default_value = (0.0, 0.0, 0.05, 1)
+    # subsurface depth and color
+    black_node_tree.inputs[1].default_value = 0.15
+    black_node_tree.inputs[3].default_value = (0, 0, 0.1, 1)
+    # specular
+    black_node_tree.inputs[5].default_value = 0.5
+    # roughness
+    black_node_tree.inputs[7].default_value = 0.05
+    # --------------------------------------------------
+    
+    # windows with lights turned on
+    shine = bpy.data.materials.new(name="shine")
+    # set material subsurface depth and color
+    shine.use_nodes = True
+    shine_nt = shine.node_tree.nodes["Principled BSDF"]
+    # diffuse color
+    shine_nt.inputs[0].default_value = (0.8, 0.8, 0.05, 1)
+    # subsurface depth and color
+    shine_nt.inputs[1].default_value = 0.15
+    shine_nt.inputs[3].default_value = (1, 0.7, 0.1, 1)
+    # specular
+    shine_nt.inputs[5].default_value = 0.5
+    # roughness
+    shine_nt.inputs[7].default_value = 0.05
+    # emission color
+    shine_nt.inputs[17].default_value = (0.8, 0.68, 0.04, 1)
+    shine_nt.inputs[18].default_value = 2
+
 
     materialsDict = {
         "color1": color1,
@@ -42,6 +74,7 @@ def createMaterials(color_1, color_2, color_3):
         "color3": color3,
         "gray": gray,
         "black": black,
+        "shine": shine
     }
     return materialsDict
 
@@ -180,10 +213,14 @@ def createBuildingPart(vertices, edges, faces, location, size, height, pillar_sz
                   location[0] + w / 3 * 2 + 2 * pillar_sz]
         y_locs = [location[1] + w / 3 + pillar_sz, location[1] + w / 3 * 2 + 2 * pillar_sz,
                   location[1], location[1]]
-        for i in range(0, 2):
+        dimen1 = [size, size, pillar_sz, pillar_sz]
+        dimen2 = [pillar_sz, pillar_sz, size, size]
+        for i in range(0, 4):
             createBlock(vertices, edges, faces,
                        (x_locs[i], y_locs[i], location[2] + 0.5),
-                        size, pillar_sz, height)
+                        dimen1[i], dimen2[i], height)
+        # createBlock(vertices, edges, faces,(location[0] + w/3 + pillar_sz, location[1], location[2] + 0.5),size, pillar_sz, height)
+        # createBlock(vertices, edges, faces,(x_locs[i], y_locs[i], location[2] + 0.5),size, pillar_sz, height)
        
     # create top
     createBlock(vertices, edges, faces,
@@ -261,7 +298,11 @@ def createBuilding(location, context, building_nbr, materials):
     building_int = create_mesh_object(
         context, v1, e1, f1, "building_int" + str(building_nbr)
     )
-    building_int.data.materials.append(materials["black"])
+    does_shine = random.randint(0,10)
+    if does_shine == 7:
+        building_int.data.materials.append(materials["shine"])
+    else:
+        building_int.data.materials.append(materials["black"])
 
     vertices = []
     edges = []
@@ -296,7 +337,7 @@ def createEarth(x_s, y_s, context):
     )
     earth = create_mesh_object(context, vertices, edges, faces, "earth")
     grey = bpy.data.materials.new(name="grey")
-    grey.diffuse_color = (0.3, 0.3, 0.3, 1.0)
+    grey.diffuse_color = (0.1, 0.1, 0.1, 1.0)
     earth.data.materials.append(grey)
     return earth
 
