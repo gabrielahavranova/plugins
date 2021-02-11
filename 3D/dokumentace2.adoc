@@ -422,6 +422,7 @@ image::./images/untitled4.png[]
 == Popis variability budov
 
 Mimo zvoliteľné parametre v GUI sa náhodne generujú nasledujúce parametre:
+
 * výška spodnej základne
 * výška hornej základne
 * hrúbka rohových stĺpov
