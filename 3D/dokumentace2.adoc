@@ -421,6 +421,18 @@ image::./images/untitled4.png[]
 
 == Popis variability budov
 
+Mimo zvoliteľné parametre v GUI sa náhodne generujú nasledujúce parametre:
+* výška spodnej základne
+* výška hornej základne
+* hrúbka rohových stĺpov
+* ne/generácia ďalších vertikálnych stĺpov
+* výška poschodia 
+* hrúbka poschodia
+* veľkosť okien je určená hore uvedenými parametrami
+* ne/generácia strechy
+* výška a hrúbka jednotlivých segmentov strechy
+* ne/rozsvietenosť budovy
+
 image::./images/Untitled5.png[]
 
 == Zdroje
