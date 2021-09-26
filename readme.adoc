@@ -1,8 +1,7 @@
-= Semestrálne práce BI-PGA
-
+= These plugins were intended for school class, therefore I'm sorry for Czech/Slovak language, I guess I don't have any motivation to translate this.
 == 2D
 === LBP Příznaky
-Vytvořte plug-in do GIMPu počítající a zobrazující příznaky (parametrické) LBP (30b)
+Vytvořte plug-in do GIMPu počítající a zobrazující příznaky LBP (30b)
 
 LBP plugin počíta a zobrazuje jeho LBP príznaky pre vstupný obrázok v ľubovoľnom farebnom móde. 
 
@@ -12,7 +11,7 @@ image::img1.jpg[]
 
 == 3D
 === Generovanie objektov - City generator
-Vytvořte plug-in do Blenderu generující parametrizovatelné objekty. Body jsou odvozeny dle složitosti generovaného objektu	(10-50b)
+Vytvořte plug-in do Blenderu generující parametrizovatelné objekty (10-50b)
 
 City generator na základe zvolenej veľkosti a farieb vygeneruje mesto tvorené náhodne generovanými mrakodrapmi. 
 
