@@ -1,4 +1,5 @@
-= These plugins were intended for school class, therefore I'm sorry for Czech/Slovak language, I guess I don't have any motivation to translate this.
+DISCLAIMER: These plugins were intended for school class, therefore I'm sorry for Czech/Slovak language, I guess I don't have any motivation to translate this.
+
 == 2D
 === LBP Příznaky
 Vytvořte plug-in do GIMPu počítající a zobrazující příznaky LBP (30b)
