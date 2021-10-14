@@ -1,4 +1,5 @@
-DISCLAIMER: These plugins were intended for school class, therefore I'm sorry for Czech/Slovak language of the documentation. Briefly, the first plugin is intended for GIMP and can be used for generating Local binary pattern from image /see https://en.wikipedia.org/wiki/Local_binary_patterns/. Second one is intended for Blender and allows user to generate random city made of skyscrapers, with ability to choose size of the city and color palette of the buildings.
+DISCLAIMER: These plugins were intended for school class, therefore I'm sorry for Czech/Slovak language of the documentation. 
+Briefly, the first plugin is intended for GIMP and can be used for generating Local binary pattern from image /see https://en.wikipedia.org/wiki/Local_binary_patterns/. Second one is intended for Blender and allows user to generate random city made of skyscrapers, with ability to choose size of the city and colour palette of the buildings.
 
 == 2D
 === LBP Příznaky
